@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<bean id="mycollege" class="com.students.College">
+	
+	<property name="id" value="518122"></property>
+	<property name="name" value="Narayana college"></property>
+	<property name="website" value="www.Narayana College.com"></property>
+	<property name="branch" ref="mybranch"></property>
+	<property name="student" ref="mystudent"></property>
+	
+	</bean>
+	
+	<bean id="mybranch" class="com.students.Branch">
+	
+	<property name="id" value="105"></property>
+	<property name="name" value="B.Tech"></property>
+	<property name="location" value="Benguluru"></property>
+	<property name="course">
+	<list>
+	<value>Mechanical</value>
+	<value>Electronics</value>
+	<value>Automobile</value>
+	<value>Aeronatical</value>
+	</list>
+	</property>
+	
+	</bean>
+	
+	<bean id="mystudent" class="com.students.Student">
+	
+	<property name="id" value="131"></property>
+	<property name="name" value="Srikanth Reddy"></property>
+	<property name="age" value="23"></property>
+	<property name="SubjectMarks">
+	<map>
+	<entry>
+	<key>
+	<value>Maths</value>
+	</key>
+	<value>98</value>
+	</entry>
+	</map>
+	</property>
+	
+	</bean>
+	
+
+	</beans>
